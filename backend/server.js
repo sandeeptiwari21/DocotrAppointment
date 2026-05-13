@@ -16,7 +16,7 @@ const port = process.env.PORT || 4000
 app.use(express.json())
 
 app.use(cors({
-  origin: 'https://doctrapointment-1.onrender.com',
+  origin: 'https://docotrapointment-1.onrender.com',
   credentials: true
 }))
 connectDB()
