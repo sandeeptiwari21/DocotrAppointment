@@ -15,8 +15,15 @@ const port = process.env.PORT || 4000
 
 app.use(express.json())
 
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:5174',
+  'https://docotrappointment-1.onrender.com',
+  'https://docotrappointment-admin.onrender.com'
+]
+
 app.use(cors({
-  origin: 'https://docotrappointment-1.onrender.com',
+  origin: allowedOrigins,
   credentials: true
 }))
 connectDB()
